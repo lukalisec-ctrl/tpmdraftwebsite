@@ -40,6 +40,16 @@
   flex-shrink: 0;
 }
 
+.nav-logo__img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav-logo__img--light {
+  mix-blend-mode: multiply;
+}
+
 .nav-logo__mark {
   width: 28px;
   height: 28px;
