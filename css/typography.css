@@ -1,0 +1,225 @@
+/* ============================================
+   TYPOGRAPHY — Scale, Styles, Utilities
+   ============================================ */
+
+/* ─── BASE ─── */
+body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--cream);
+}
+
+/* ─── DISPLAY / HEADINGS ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.h1, h1 {
+  font-size: clamp(3rem, 6.5vw, 6.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 30;
+}
+
+.h2, h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-variation-settings: 'opsz' 72, 'SOFT' 40;
+}
+
+.h3, h3 {
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'opsz' 36, 'SOFT' 50;
+}
+
+.h4, h4 {
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-variation-settings: 'opsz' 24, 'SOFT' 60;
+}
+
+/* ─── SIGNATURE MOVE: italic em in magenta ─── */
+h1 em, h2 em, h3 em, .h1 em, .h2 em, .h3 em {
+  font-style: italic;
+  color: var(--magenta);
+  font-variation-settings: 'opsz' 144, 'SOFT' 80;
+}
+
+/* ─── EYEBROW LABELS ─── */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--magenta);
+  flex-shrink: 0;
+}
+
+.eyebrow--no-line::before {
+  display: none;
+}
+
+/* ─── BODY TEXT VARIANTS ─── */
+.lead {
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.body-soft {
+  color: var(--ink-soft);
+}
+
+.caption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+/* ─── TAGLINE ─── */
+.tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-variation-settings: 'opsz' 36, 'SOFT' 80;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  letter-spacing: -0.01em;
+}
+
+/* ─── LARGE DECORATIVE TEXT ─── */
+.deco-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(8rem, 22vw, 20rem);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100;
+  line-height: 0.85;
+  color: var(--magenta);
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  letter-spacing: -0.05em;
+}
+
+/* ─── MONO NUMBERS ─── */
+.num-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--magenta);
+  opacity: 0.7;
+}
+
+/* ─── ON DARK SURFACES ─── */
+.on-dark {
+  color: rgba(250, 246, 241, 0.75);
+}
+
+.on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4,
+.on-dark .h1, .on-dark .h2, .on-dark .h3 {
+  color: var(--cream);
+}
+
+.on-dark h1 em, .on-dark h2 em, .on-dark h3 em {
+  color: var(--magenta-soft);
+}
+
+.on-dark .eyebrow {
+  color: var(--magenta-soft);
+}
+
+.on-dark .eyebrow::before {
+  background: var(--magenta-soft);
+}
+
+.on-dark p, .on-dark .body-soft {
+  color: rgba(250, 246, 241, 0.7);
+}
+
+.on-dark .lead {
+  color: rgba(250, 246, 241, 0.9);
+}
+
+.on-dark .tagline {
+  color: rgba(250, 246, 241, 0.65);
+}
+
+/* ─── LINKS ─── */
+.text-link {
+  color: var(--magenta);
+  font-weight: 500;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--magenta);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.text-link:hover::after {
+  transform: scaleX(1);
+}
+
+.arrow-link {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--magenta);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap var(--dur-base) var(--ease-out);
+}
+
+.arrow-link .arrow {
+  transition: transform var(--dur-base) var(--ease-out);
+  display: inline-block;
+}
+
+.arrow-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+.on-dark .arrow-link {
+  color: var(--magenta-soft);
+}

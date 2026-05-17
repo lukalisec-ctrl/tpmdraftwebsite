@@ -1,0 +1,56 @@
+/* ============================================
+   VARIABLES — Design Tokens
+   ============================================ */
+
+:root {
+  /* ─── SURFACES ─── */
+  --cream:       #FAF6F1;
+  --cream-warm:  #F5EDE4;
+  --cream-pink:  #F7E8F0;
+  --blush:       #E8D4C8;
+
+  /* ─── ACCENT ─── */
+  --magenta:      #B83280;
+  --magenta-deep: #8A1E5C;
+  --magenta-soft: #E8B0D0;
+
+  /* ─── INK ─── */
+  --ink:       #1A0F18;
+  --ink-soft:  #4A3D45;
+  --ink-light: #7A6D75;
+
+  /* ─── LINES ─── */
+  --line:        rgba(26, 15, 24, 0.12);
+  --line-strong: rgba(26, 15, 24, 0.24);
+
+  /* ─── FONTS ─── */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Manrope', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  /* ─── LAYOUT ─── */
+  --container:     1320px;
+  --gutter:        clamp(20px, 4vw, 56px);
+  --section-pad:   clamp(80px, 12vw, 160px);
+
+  /* ─── RADIUS ─── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-pill: 999px;
+
+  /* ─── TRANSITIONS ─── */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in:    cubic-bezier(0.64, 0, 0.78, 0);
+  --dur-fast:   160ms;
+  --dur-base:   280ms;
+  --dur-slow:   460ms;
+  --dur-reveal: 700ms;
+
+  /* ─── SHADOWS ─── */
+  --shadow-sm:  0 1px 4px rgba(26, 15, 24, 0.08);
+  --shadow-md:  0 4px 16px rgba(26, 15, 24, 0.12);
+  --shadow-lg:  0 12px 40px rgba(26, 15, 24, 0.16);
+  --shadow-magenta: 0 8px 32px rgba(184, 50, 128, 0.24);
+}

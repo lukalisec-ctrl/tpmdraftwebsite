@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <!-- Mark -->
+  <rect width="28" height="28" x="0" y="6" rx="6" fill="#B83280"/>
+  <rect x="6" y="12" width="16" height="16" rx="2" fill="none" stroke="#FAF6F1" stroke-width="1.5"/>
+  <!-- Wordmark: TPM -->
+  <text x="38" y="22" font-family="Georgia, serif" font-size="13" font-weight="600" fill="#1A0F18" letter-spacing="-0.3">Tanja Pia</text>
+  <text x="38" y="33" font-family="Georgia, serif" font-size="8" fill="#7A6D75" letter-spacing="1.2">METELKO</text>
+</svg>
